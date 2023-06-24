@@ -38,7 +38,7 @@ class InputField extends Component {
         <input onChange={this.handleChange} type="text"/>
         <button type="submit" className="btn btn-primary m-3">GET</button>
         {this.state.isLoading && <p className="sub-heading">getting the short URL...</p>}
-        {this.state.returnedData && this.state.longurl&& <p className="sub-heading">{this.state.returnedData}</p>}
+        {this.state.returnedData && this.state.longurl && !this.state.isLoading && <p className="sub-heading">{this.state.returnedData}</p>}
        </form>
       
         
