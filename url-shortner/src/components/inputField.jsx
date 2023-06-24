@@ -7,7 +7,7 @@ class InputField extends Component {
     handleSubmit =async (e) =>{
         e.preventDefault();
         try{
-           const {data}= await  axios.post("https://url-shortner-backend-hnpf.onrender.com/api/", {longurl:this.state.longurl});
+           const {data}= await  axios.post("https://url-shortner-backend-hnpf.onrender.com/api/url", {longurl:this.state.longurl});
            console.log(data);
            this.setState({returnedData:data});
         }
